@@ -22,7 +22,7 @@ const ContactForm = () => {
     event.preventDefault();
     setSubmittext("Submiting...");
     axios
-      .post('http://localhost:8082/send', { ...state })
+      .post('https://35.78.78.172/:8080/send', { ...state })
       .then(response => {
         setResult(response.data);
         setState({ name: '', email: '', subject: '', phone: '', message: '' });
