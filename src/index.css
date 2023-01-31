@@ -8,25 +8,66 @@
 section {
   padding: 5% 0;
 }
+.nav-brand img {
+  height: 30px;
+}
+
 section h1 {
   font-weight: 700;
 }
-#hero_section,#contact_section {
+.btn-secondary {}
+
+#hero_section, #news_section {
   padding: 5% 0;
   background-color: #f7f5f2;
+}
+#contact_section, #pricing_section, #how_it_works_section {
+  padding: 5% 0 0;
+  background-color: #f7f5f2;
+}
+#contact_section .form-label {
+  color: #ffffff;
+}
+#contact_section .bg-dark {
+  background-color: #0b3948 !important;
+}
+#hero_section p {
+  color: #748289;
+}
+#how_it_works_section .card {
+  background: none;
+  border: none;
 }
 #carousel_section {
   padding: 5% 0;
   background-color: #ffffff;
+}
+#carousel_section h3 {
+  color: #0B3948;
 }
 #carousel_section .owl-carousel .owl-item img {
   /*box-shadow: 0px 5px 20px 0px rgb(0 0 0 / 8%);*/
   /*padding: 8% 25%;
   border-radius: 6px;*/
 }
-.btn {
+#how_it_works_section .fa {
+  margin: 10px auto;
+    /*padding: 36px;*/
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: -5px -5px 0px 0px #d9d9d9;
+    padding: 23px 20px 20px 23px;
+    width: 90px;
+    line-height: 45px;
+}
+.btn-primary {
   background-color: #0b3948;
   border-color: #0b3948;
+}
+.btn-secondary {
+  color: #0b3948;
+  background-color: #FFD470;
+  border-color: #FFD470;
 }
 .mini-title {
   color:  #0b3948;

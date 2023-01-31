@@ -51,7 +51,11 @@ const ContactForm = () => {
     <section id="contact_section">
     <div className="container">
       <Row>
-      <h4 className="">Get in touch</h4>
+        <Col>
+        <div class="bg-dark py-5 rounded-3">
+    <Col md={{ span: 8, offset: 2 }}>
+      <Row>
+      <h4 className="text-white text-uppercase">Get in touch</h4>
       </Row>
       <form onSubmit={sendEmail}>
         <Row className="mb-3">
@@ -115,10 +119,14 @@ const ContactForm = () => {
             onChange={onInputChange}
           />
         </Form.Group>
-        <Button className="mt-2" variant="primary" type="submit">
+        <Button className="mt-3 btn-lg" variant="secondary" type="submit">
           {submittext}
         </Button>
       </form>
+      </Col>
+      </div>
+      </Col>
+      </Row>
     </div>
     </section>
   );
