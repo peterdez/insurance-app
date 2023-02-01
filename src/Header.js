@@ -20,7 +20,7 @@ const Header = () => {
         <li className="nav-item">
           <a className="nav-link" href="#">insurance</a>
         </li><li className="nav-item">
-          <a className="nav-link" href="#">Contact</a>
+          <a className="nav-link" href="#contact_section">Contact</a>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

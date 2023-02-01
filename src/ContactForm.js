@@ -62,6 +62,7 @@ const ContactForm = () => {
         <Form.Group as={Col} controlId="name">
           <Form.Label>Name</Form.Label>
           <Form.Control 
+          required 
           type="text"
           name="name"
           value={state.name}
@@ -73,6 +74,7 @@ const ContactForm = () => {
         <Form.Group as={Col} controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control 
+          required 
           type="text"
           name="email"
           value={state.email}
@@ -85,7 +87,8 @@ const ContactForm = () => {
       <Row className="mb-3">
       <Form.Group as={Col} controlId="subject">
           <Form.Label>Subject</Form.Label>
-          <Form.Control
+          <Form.Control 
+            required
             type="text"
             name="subject"
             value={state.subject}
@@ -97,6 +100,7 @@ const ContactForm = () => {
         <Form.Group as={Col} controlId="phone">
           <Form.Label>Phone</Form.Label>
           <Form.Control 
+          required
           type="text"
           name="phone"
           value={state.phone}
