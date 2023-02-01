@@ -25,7 +25,7 @@ const ClientsCarousel = () => {
     return (
    <section id="carousel_section">
     <div className="container">
-      <h3 className="text-center mb-5">More Than A 300+ Companies Have Moved To Instive</h3>
+      <h3 className="text-center mb-5">More Than 300+ Companies Trust Us</h3>
    <OwlCarousel className='owl-theme' items={5} autoplay={true} loop margin={120}>
     {images.map((image) => <MyOwlItem key={image.id} title={image.title} url={image.url} />)}
 </OwlCarousel>
