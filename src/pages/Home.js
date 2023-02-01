@@ -3,13 +3,13 @@ import News from "../News";
 import Pricing from "../Pricing";
 import Hero from "../Hero";
 import HowItWorks from "../HowItWorks";
-import Owldemo1 from "../Owldemo1";
+import ClientsCarousel from "../ClientsCarousel";
 
 const Home = () => {
      return (
         <>
 <Hero />
-<Owldemo1 />
+<ClientsCarousel />
 <HowItWorks />
 <Pricing />
 <ContactForm />

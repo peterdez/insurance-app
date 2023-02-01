@@ -7,7 +7,7 @@ function MyOwlItem({title, url}) {
     return <div><img title={title} src={url }/> </div>;
   }
 
-const Owldemo1 = () => {
+const ClientsCarousel = () => {
     const images = [
         {id: 1, title: "client 1", url: "/assets/images/01.png"},
         {id: 2, title: "client 2", url: "/assets/images/02.png"},
@@ -34,4 +34,4 @@ const Owldemo1 = () => {
     );
 }
 
-export default Owldemo1;
+export default ClientsCarousel;
