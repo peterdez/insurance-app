@@ -46,8 +46,8 @@ section h1 {
 }
 #hero_section {
   background: #f7f5f2;  /* fallback for old browsers */
-    background: linear-gradient(rgb(247,245,242,0.2), rgb(247,245,242,0.8)), url("http://localhost:3000/assets/images/hero-bg.jpg");  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(rgb(247,245,242,0.2), rgb(247,245,242,0.8)), url("http://localhost:3000/assets/images/hero-bg.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(rgb(247,245,242,0.2), rgb(247,245,242,0.8)), url("https://main.d2qwcljsqlxhuc.amplifyapp.com//assets/images/hero-bg.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgb(247,245,242,0.2), rgb(247,245,242,0.8)), url("https://main.d2qwcljsqlxhuc.amplifyapp.com//assets/images/hero-bg.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-repeat: no-repeat;
 }
