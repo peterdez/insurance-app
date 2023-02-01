@@ -15,15 +15,50 @@ section {
 section h1 {
   font-weight: 700;
 }
-.btn-secondary {}
+.btn-red {
+  color: #ffffff;
+  background-color: #a60000;
+}
 
+.btn-red:hover {
+  color: #ffffff;
+  background-color: #c10505;
+}
+
+#news_section .card {
+  background-color: #FFFFFF;
+    box-shadow: 0px 10px 60px 0px rgb(0 0 0 / 10%);
+    border-radius: 12px 12px 12px 12px;
+    border: none;
+}
+
+#news_section .card-title {
+  color: #212529;
+}
+
+#news_section .card-text {
+  color: #212529;
+}
+
+#news_section .card-footer {
+  border: none;
+  background: none;
+}
+#hero_section {
+  background: #f7f5f2;  /* fallback for old browsers */
+    background: linear-gradient(rgb(247,245,242,0.2), rgb(247,245,242,0.8)), url("http://localhost:3000/assets/images/hero-bg.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgb(247,245,242,0.2), rgb(247,245,242,0.8)), url("http://localhost:3000/assets/images/hero-bg.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 #hero_section, #news_section {
   padding: 5% 0;
-  background-color: #f7f5f2;
+  /*background-color: #f7f5f2;*/
+  background-color: #edf3f1;
 }
-#contact_section, #pricing_section, #how_it_works_section {
+#contact_section, #pricing_section {
   padding: 5% 0 0;
-  background-color: #f7f5f2;
+  background-color: #edf3f1;
 }
 #contact_section .form-label {
   color: #ffffff;
@@ -49,6 +84,10 @@ section h1 {
   /*box-shadow: 0px 5px 20px 0px rgb(0 0 0 / 8%);*/
   /*padding: 8% 25%;
   border-radius: 6px;*/
+}
+#how_it_works_section {
+    background-color: #ffd470;
+    padding: 5% 0;
 }
 #how_it_works_section .fa {
   margin: 10px auto;
@@ -77,7 +116,15 @@ section h1 {
 }
 footer {
   background-color: #0b3948;
-  padding: 5% 0;
+  padding: 5% 0 0;
+}
+.footer-bottom {
+  border-top: 1px solid #40565d;
+    margin-top: 40px;
+    padding: 15px 0;
+}
+.footer-bottom p {
+ color: #ffffff;
 }
 footer h4{
 color: #ffffff;
