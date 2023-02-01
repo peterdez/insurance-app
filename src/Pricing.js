@@ -93,7 +93,7 @@ const eliteComponentProps = {
           <h4 className="my-0 fw-normal">Fixed Benefit Health</h4>
         </div>
         <div className="card-body">
-          <h1 className="card-title pricing-card-title">$4000<small className="text-muted fw-light">/mo</small></h1>
+          <h1 className="card-title pricing-card-title">₦4000<small className="text-muted fw-light">/mo</small></h1>
           <p>This type of health insurance plane your actual medical expense both a reimbursement basis.</p>
           <PaystackButton className="w-100 btn btn-lg btn-primary" {...eliteComponentProps} />
         </div>
