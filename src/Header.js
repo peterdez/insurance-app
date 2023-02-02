@@ -1,8 +1,41 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { Container, Col, Row, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Modal from 'react-bootstrap/Modal';
 
 
 const Header = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [login, setLogin] = useState(false);
+
+  const handleSubmit = (e) => {
+    // prevent the form from refreshing the whole page
+    e.preventDefault();
+    const configuration = {
+        method: "post",
+        url: "https://femi-nodejs-mongodb-auth-app.herokuapp.com/login",
+        data: {
+          email,
+          password,
+        },
+      };
+      // make the API call
+    axios(configuration)
+    .then((result) => {
+      setLogin(true);
+      setShow(false);
+    })
+    .catch((error) => {
+      error = new Error();
+    });
+  }
     return (
         <header>
   <div className="container">
@@ -34,13 +67,82 @@ const Header = () => {
           </ul>
         </li>
       </ul>
-      <a className="navbar-btn btn btn-lg btn-red lift ms-auto" href="#pricing_section">
+      {login ? (
+          <Link to="/register" className="ms-auto btn btn-primary btn-lg">Register</Link>
+        ) : (
+          <Button className="ms-auto" variant="primary" size="lg" onClick={handleShow}>
+        Login
+      </Button>
+        )}
+      
+      <a className="navbar-btn btn btn-lg btn-red lift ms-2" href="#pricing_section">
         View Plans
       </a>
+      <Modal show={show} size="sm" onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Please log in</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <Form onSubmit={(e)=>handleSubmit(e)}>
+        {/* email */}
+        <div className="form-floating">
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            type="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter email"
+          />
+        </Form.Group>
+        </div>
+
+        {/* password */}
+        <div className="form-floating">
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            className="form-control" 
+          />
+        </Form.Group>
+        </div>
+      </Form>
+
+
+
+        
+        </Modal.Body>
+        <Modal.Footer>
+          {/* submit button */}
+        <Button
+          className="w-100" 
+          size="lg" 
+          variant="primary"
+          type="submit"
+          onClick={(e) => handleSubmit(e)}
+        >
+          Login
+        </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   </div>
 </nav>
+<Row>
+{login ? (
+          <p className="text-success">You Are Logged in Successfully</p>
+        ) : (
+          <p className="text-danger">You Are Not Logged in</p>
+        )}
+</Row>
 </div>
+
 </header>
     );
 }

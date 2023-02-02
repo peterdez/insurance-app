@@ -52,7 +52,7 @@ const ContactForm = () => {
     <div className="container">
       <Row>
         <Col>
-        <div class="bg-dark py-5 rounded-3">
+        <div className="bg-dark py-5 rounded-3">
     <Col md={{ span: 8, offset: 2 }}>
       <Row>
       <h4 className="text-white text-uppercase">Get in touch</h4>
@@ -112,7 +112,7 @@ const ContactForm = () => {
 
 
         
-        <Form.Group controlId="subject">
+        <Form.Group controlId="message">
           <Form.Label>Message</Form.Label>
           <Form.Control
             as="textarea"
