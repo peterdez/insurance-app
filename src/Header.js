@@ -135,11 +135,7 @@ const Header = () => {
   </div>
 </nav>
 <Row>
-{login ? (
-          <p className="text-success">You Are Logged in Successfully</p>
-        ) : (
-          <p className="text-danger">You Are Not Logged in</p>
-        )}
+{login &&  <p className="text-success">You Are Logged in Successfully</p>}
 </Row>
 </div>
 
