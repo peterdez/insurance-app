@@ -85,7 +85,6 @@ const Header = () => {
         <Modal.Body>
         <Form onSubmit={(e)=>handleSubmit(e)}>
         {/* email */}
-        <div className="form-floating">
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -96,10 +95,8 @@ const Header = () => {
             placeholder="Enter email"
           />
         </Form.Group>
-        </div>
 
         {/* password */}
-        <div className="form-floating">
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -111,13 +108,14 @@ const Header = () => {
             className="form-control" 
           />
         </Form.Group>
-        </div>
       </Form>
-
-
-
-        
-        </Modal.Body>
+      {/* display success message */}
+      {login ? (
+          <p className="text-success mt-2 mb-0">You Are Logged in Successfully</p>
+        ) : (
+          <p className="text-danger mt-2 mb-0">You Are Not Logged in</p>
+        )}
+      </Modal.Body>
         <Modal.Footer>
           {/* submit button */}
         <Button
@@ -135,7 +133,6 @@ const Header = () => {
   </div>
 </nav>
 <Row>
-{login &&  <p className="text-success">You Are Logged in Successfully</p>}
 </Row>
 </div>
 
